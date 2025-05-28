@@ -1,0 +1,10 @@
+# ninja log v5
+19	2885	7674757366444753	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	a2dfc038aea0d7c4
+10	2902	7674757366839205	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	7f970323e3b90b1a
+30	2910	7674757366864616	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	b13467c8a4ed73f0
+35	2985	7674757367678497	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	ecc77e56b6d5837
+24	3014	7674757367981680	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e8e8d8e17fbaab27
+1	3049	7674757368344838	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	c1f5d909b1ea5637
+15	3167	7674757369536545	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8fd7c1bdcb1cda0e
+6	3273	7674757370588209	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4cf768e2fd2c2e16
+3273	3421	7674757372134548	C:/VersionProjects/Hex/Hex Maraphon 2048/HexMarathon2048/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/j3u3n1nv/obj/armeabi-v7a/libgame.so	fb18954efbcc9cc4

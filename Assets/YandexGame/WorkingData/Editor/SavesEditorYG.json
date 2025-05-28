@@ -1,0 +1,20 @@
+{
+  "idSave": 1560,
+  "isFirstSession": false,
+  "language": "en",
+  "promptDone": false,
+  "money": 1,
+  "newPlayerName": "Hello!",
+  "openLevels": [
+    false,
+    true,
+    false
+  ],
+  "record": 9,
+  "award2048": 2,
+  "award4096": 0,
+  "award8192": 0,
+  "award16384": 0,
+  "award32768": 0,
+  "award65536": 0
+}

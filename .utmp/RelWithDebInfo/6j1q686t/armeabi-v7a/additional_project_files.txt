@@ -1,0 +1,17 @@
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\GAToUnityCallbacks.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroEnd.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroHeaderBegin.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroSourceBegin.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAApplication.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAConfiguration.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGADebug.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAEvents.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAInput.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboard.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboardCallbacks.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGATypes.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAVersion.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGACallbacks.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAConfigurationCallbacks.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAKeyEventCallbacks.h
+C:\VersionProjects\NewBird\NewBird\NewBird\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAMotionEventCallbacks.h

@@ -1,0 +1,10 @@
+# ninja log v5
+32	3324	7628894929373465	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	94b4e20f03fbfce0
+7	3398	7628894930480035	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	bc3d0aebdc79ffa5
+38	3424	7628894930692529	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	14661c1d67182645
+44	3530	7628894931721652	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	1847f15ed637bce4
+25	3531	7628894931556155	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	d6ca57133be6763c
+1	3714	7628894933626200	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	e7318edfbd90a52e
+20	3921	7628894935669364	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	9b3e9258fa65a8bb
+13	4132	7628894937815393	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	cc10378af157e04b
+4132	4319	7628894939748829	C:/VersionProjects/NewBird/NewBird/NewBird/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6j1q686t/obj/armeabi-v7a/libgame.so	76f24ac727f33ba3

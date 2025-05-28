@@ -1,0 +1,5 @@
+C:/VersionProjects/NewBird/NewBird/NewBird/.utmp/RelWithDebInfo/6j1q686t/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/VersionProjects/NewBird/NewBird/NewBird/.utmp/RelWithDebInfo/6j1q686t/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/VersionProjects/NewBird/NewBird/NewBird/.utmp/RelWithDebInfo/6j1q686t/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+C:/VersionProjects/NewBird/NewBird/NewBird/.utmp/RelWithDebInfo/6j1q686t/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+C:/VersionProjects/NewBird/NewBird/NewBird/.utmp/RelWithDebInfo/6j1q686t/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir

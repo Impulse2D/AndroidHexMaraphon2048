@@ -1,0 +1,1 @@
+C:\VersionProjects\Hex\Hex Maraphon 2048\HexMarathon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\j3u3n1nv\obj\armeabi-v7a

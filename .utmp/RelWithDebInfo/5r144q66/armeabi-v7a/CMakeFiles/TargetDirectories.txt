@@ -1,0 +1,5 @@
+C:/VersionProjects/Party/Party/PartyGame/.utmp/RelWithDebInfo/5r144q66/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/VersionProjects/Party/Party/PartyGame/.utmp/RelWithDebInfo/5r144q66/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/VersionProjects/Party/Party/PartyGame/.utmp/RelWithDebInfo/5r144q66/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+C:/VersionProjects/Party/Party/PartyGame/.utmp/RelWithDebInfo/5r144q66/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+C:/VersionProjects/Party/Party/PartyGame/.utmp/RelWithDebInfo/5r144q66/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,5 @@
+C:/VersionProjects/Hex/Hex Maraphon 2048/Hex marathon 2048/HexMarathon2048/.utmp/RelWithDebInfo/5t47t1r3/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/VersionProjects/Hex/Hex Maraphon 2048/Hex marathon 2048/HexMarathon2048/.utmp/RelWithDebInfo/5t47t1r3/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/VersionProjects/Hex/Hex Maraphon 2048/Hex marathon 2048/HexMarathon2048/.utmp/RelWithDebInfo/5t47t1r3/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+C:/VersionProjects/Hex/Hex Maraphon 2048/Hex marathon 2048/HexMarathon2048/.utmp/RelWithDebInfo/5t47t1r3/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+C:/VersionProjects/Hex/Hex Maraphon 2048/Hex marathon 2048/HexMarathon2048/.utmp/RelWithDebInfo/5t47t1r3/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir
