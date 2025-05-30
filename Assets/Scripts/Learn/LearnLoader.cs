@@ -1,4 +1,3 @@
-using DetectorDeviceType;
 using Hexes;
 using Services;
 using UnityEngine;
@@ -12,8 +11,6 @@ public class LearnLoader : MonoBehaviour
     private PauseService _pauseService;
     private GameObject _learnPanel;
     private GameObject _learnArm;
-    private GameObject _learnMouse;
-    private DeviceTypeDetector _deviceTypeDetector;
     private HexagonsMover _hexagonsMover;
 
     private void OnDisable()
@@ -24,15 +21,11 @@ public class LearnLoader : MonoBehaviour
     public void Construct(PauseService pauseService,
         GameObject learnPanel,
         GameObject learnArm,
-        GameObject learnMouse,
-        DeviceTypeDetector deviceTypeDetector,
         HexagonsMover hexagonsMover)
     {
         _pauseService = pauseService;
         _learnPanel = learnPanel;
         _learnArm = learnArm;
-        _learnMouse = learnMouse;
-        _deviceTypeDetector = deviceTypeDetector;
         _hexagonsMover = hexagonsMover;
 
         _hexagonsMover.HexaGoingDetected += HideLearnPointers;
@@ -48,21 +41,13 @@ public class LearnLoader : MonoBehaviour
             PlayerPrefs.SetString(StartLearnStatus, StartLearnFirstStatus);
             PlayerPrefs.Save();
 
-            if (_deviceTypeDetector.IsMobileDevice == true)
-            {
-                _learnArm.gameObject.SetActive(true);
-            }
-            else
-            {
-                _learnMouse.gameObject.SetActive(true);
-            }
+            _learnArm.gameObject.SetActive(true);
         }
     }
 
     private void HideLearnPointers()
     {
         _learnArm.gameObject.SetActive(false);
-        _learnMouse.gameObject.SetActive(false);
 
         PlayerPrefs.SetString(StartLearnStatus, StartLearnSecondStatus);
         PlayerPrefs.Save();

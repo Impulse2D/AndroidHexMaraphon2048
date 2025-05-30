@@ -6,7 +6,7 @@
   <files />
   <settings>
     <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
-    <setting name="bundleId" value="com.hexmaraphon.impulseproger" />
+    <setting name="bundleId" value="com.hexa2048.impulseproger" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="True" />

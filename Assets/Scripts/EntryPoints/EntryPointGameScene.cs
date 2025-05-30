@@ -1,8 +1,6 @@
 using CompositesRoots;
-using DetectorDeviceType;
-using Localozation;
+using Localization;
 using PlayerInputReader;
-using SaverData;
 using Services;
 using SpawnerHexa;
 using UI;
@@ -17,18 +15,16 @@ public class EntryPointGameScene : MonoBehaviour
     [SerializeField] private GamePointsIndicator _gamePointsIndicator;
     [SerializeField] private ScorePanelView _scorePanelView;
     [SerializeField] private PauseService _pauseService;
-    [SerializeField] private LanguageDefinition _languageDefinition;
     [SerializeField] private SoundsCustomizer _soundsCustomizer;
     [SerializeField] private LearnLoader _learnLoader;
-    [SerializeField] private DeviceTypeDetector _deviceTypeDetector;
+    [SerializeField] private LocalozationLoader _localozationLoader;
 
     private void Start()
     {
         _compositeRootGameScene.Init();
-        _deviceTypeDetector.Init();
+        _localozationLoader.Init();
         _pauseService.Init();
         _inputReader.Init();
-        _languageDefinition.Init();
         _hexaSpawner.Init();
         _starsSpawner.Init();
         _gamePointsIndicator.Init();

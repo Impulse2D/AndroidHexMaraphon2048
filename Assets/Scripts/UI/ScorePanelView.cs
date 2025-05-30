@@ -1,8 +1,6 @@
-using Liderboard;
 using SaverData;
 using TMPro;
 using UnityEngine;
-using YG;
 
 namespace UI
 {
@@ -15,40 +13,30 @@ namespace UI
 
         private TextMeshProUGUI _textRecordQuantyScore;
         private TextMeshProUGUI _textCurrentQuantyScore;
-        private GamePointsIndicator _gamePointsIndicator;
-        private LiderboardSaver _landboardSaver;
         private SaverDataGame _saverDataGame;
 
         private int _currentQuantyScore;
 
-        public void Construct(GamePointsIndicator gamePointsIndicator,
-            TextMeshProUGUI textRecordQuantyScore,
+        public void Construct(TextMeshProUGUI textRecordQuantyScore,
             TextMeshProUGUI textCurrentQuantyScore,
-            LiderboardSaver liderboardSaver,
             SaverDataGame saverDataGame)
         {
-            _gamePointsIndicator = gamePointsIndicator;
             _textRecordQuantyScore = textRecordQuantyScore;
             _textCurrentQuantyScore = textCurrentQuantyScore;
-            _landboardSaver = liderboardSaver;
             _saverDataGame = saverDataGame;
         }
 
         public void Init()
         {
             LoadCurrentScore();
-
-            LoadRecordYandexGames();
-            //LoadRecordAndroid();
+            LoadRecordAndroid();
         }
 
         public void IncreaseCurrentScore()
         {
             _currentQuantyScore++;
 
-            TryUpdateRecordYandexGames();
-
-            // TryUpdateRecordAndroid();
+            TryUpdateRecordAndroid();
 
             SetTextQuantyCurrentScore(_currentQuantyScore);
 
@@ -57,26 +45,12 @@ namespace UI
             PlayerPrefs.Save();
         }
 
-        private void TryUpdateRecordYandexGames()
-        {
-            if (_currentQuantyScore > YandexGame.savesData.record)
-            {
-                YandexGame.savesData.record = _currentQuantyScore;
-
-                PlayerPrefs.SetInt(Record, _currentQuantyScore);
-                PlayerPrefs.Save();
-
-                _landboardSaver.AddNewLeaderboardScores(YandexGame.savesData.record);
-
-                SetTextRecord(YandexGame.savesData.record);
-            }
-        }
-
         private void TryUpdateRecordAndroid()
         {
             if (_currentQuantyScore > PlayerPrefs.GetInt(Record))
             {
                 PlayerPrefs.SetInt(Record, _currentQuantyScore);
+                PlayerPrefs.Save();
 
                 SetTextRecord(PlayerPrefs.GetInt(Record));
             }
@@ -84,8 +58,7 @@ namespace UI
 
         private void LoadCurrentScore()
         {
-            if (PlayerPrefs.HasKey(CurrentQuantyScore) == true &&
-                YandexGame.savesData.record == PlayerPrefs.GetInt(Record))
+            if (PlayerPrefs.HasKey(CurrentQuantyScore) == true)
             {
                 _currentQuantyScore = PlayerPrefs.GetInt(CurrentQuantyScore);
                 SetTextQuantyCurrentScore(_currentQuantyScore);
@@ -94,28 +67,6 @@ namespace UI
             {
                 ResetCurrentQuantyScore();
                 SetTextQuantyCurrentScore(_currentQuantyScore);
-            }
-        }
-
-        private void LoadRecordYandexGames()
-        {
-            if (_currentQuantyScore > YandexGame.savesData.record ||
-                YandexGame.savesData.record != PlayerPrefs.GetInt(Record))
-            {
-                _saverDataGame.ResetPrefsData();
-
-                ResetCurrentQuantyScore();
-                SetTextQuantyCurrentScore(_currentQuantyScore);
-
-                SetTextRecord(YandexGame.savesData.record);
-
-                PlayerPrefs.SetInt(Record, YandexGame.savesData.record);
-            }
-            else
-            {
-                SetTextRecord(YandexGame.savesData.record);
-
-                _saverDataGame.Init();
             }
         }
 

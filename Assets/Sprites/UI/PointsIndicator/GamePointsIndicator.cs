@@ -1,6 +1,5 @@
 using System.Collections;
 using Awards;
-using Disablers;
 using Generations;
 using Services;
 using SoundsGame;
@@ -8,7 +7,6 @@ using TMPro;
 using UI;
 using UnityEngine;
 using UnityEngine.UI;
-using YG;
 
 public class GamePointsIndicator : MonoBehaviour
 {
@@ -71,6 +69,7 @@ public class GamePointsIndicator : MonoBehaviour
         TryResetFillAmount();
         TryResetQuantityStars();
 
+
         if (_coroutine != null)
         {
             StopCoroutine(_coroutine);
@@ -80,38 +79,6 @@ public class GamePointsIndicator : MonoBehaviour
 
         _starsGenerator.StarsCreated += ShowFillAmount;
         _awardsUiSpawner.AwardUiCoinDoMoveCompleted += ShowWinPanel;
-    }
-
-    public void TryResetQuantityStars()
-    {
-        float minQuantityStars = 0;
-
-        if (PlayerPrefs.HasKey(QuantityStars) == true &&
-            YandexGame.savesData.record == PlayerPrefs.GetInt(Record))
-        {
-            _quantityStars = PlayerPrefs.GetFloat(QuantityStars);
-        }
-        else
-        {
-            _quantityStars = minQuantityStars;
-        }
-    }
-
-    public void TryResetFillAmount()
-    {
-        float minValueFillAmount = 0f;
-
-        if (PlayerPrefs.HasKey(QuantityStars) == true &&
-            YandexGame.savesData.record == PlayerPrefs.GetInt(Record))
-        {
-            CalculatePercentage(PlayerPrefs.GetFloat(QuantityStars));
-
-            _imageIndicator.fillAmount = _currentValuePercentage;
-        }
-        else
-        {
-            _imageIndicator.fillAmount = minValueFillAmount;
-        }
     }
 
     private void ShowFillAmount()
@@ -137,10 +104,6 @@ public class GamePointsIndicator : MonoBehaviour
             _imageIndicator.fillAmount = 1;
 
             _scorePanelView.IncreaseCurrentScore();
-            _awardsCounter.SaveYandexScoresAdward();
-            _awardsCounter.ResetPrefsQuantyScoresAdward();
-
-            YandexGame.SaveProgress();
 
             PlayerPrefs.DeleteKey(QuantityStars);
 
@@ -152,7 +115,7 @@ public class GamePointsIndicator : MonoBehaviour
             _pauseService.EnablePause();
             _winPanel.gameObject.SetActive(true);
 
-            _recordWinPanel.text = YandexGame.savesData.record.ToString();
+            _recordWinPanel.text = PlayerPrefs.GetInt(Record).ToString();
             _currentScoreWinPanel.text = PlayerPrefs.GetInt(CurrentQuantyScore).ToString();
 
             _winSoundPlayer.PlaySound();
@@ -210,5 +173,35 @@ public class GamePointsIndicator : MonoBehaviour
     private void CalculatePercentage(float valuePoints)
     {
         _currentValuePercentage = valuePoints / _maxQuantityStar;
+    }
+
+    private void TryResetFillAmount()
+    {
+        float minValueFillAmount = 0f;
+
+        if (PlayerPrefs.HasKey(QuantityStars) == true)
+        {
+            CalculatePercentage(PlayerPrefs.GetFloat(QuantityStars));
+
+            _imageIndicator.fillAmount = _currentValuePercentage;
+        }
+        else
+        {
+            _imageIndicator.fillAmount = minValueFillAmount;
+        }
+    }
+
+    private void TryResetQuantityStars()
+    {
+        float minQuantityStars = 0;
+
+        if (PlayerPrefs.HasKey(QuantityStars) == true)
+        {
+            _quantityStars = PlayerPrefs.GetFloat(QuantityStars);
+        }
+        else
+        {
+            _quantityStars = minQuantityStars;
+        }
     }
 }

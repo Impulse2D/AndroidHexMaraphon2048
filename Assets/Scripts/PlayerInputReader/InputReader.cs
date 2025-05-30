@@ -14,7 +14,6 @@ namespace PlayerInputReader
         private PauseService _pausedService;
         public event Action MovingDetected;
         public event Action MovingNotDetected;
-        public event Action<Vector3> ClickDetected;
         public event Action Click;
 
         public bool IsMoving => _isMoving;

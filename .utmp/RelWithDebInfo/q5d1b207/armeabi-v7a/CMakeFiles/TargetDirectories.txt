@@ -1,0 +1,5 @@
+C:/VersionProjects/Hex/AndroidHexMaraphon2048/AndroidHexMaraphon2048/.utmp/RelWithDebInfo/q5d1b207/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/VersionProjects/Hex/AndroidHexMaraphon2048/AndroidHexMaraphon2048/.utmp/RelWithDebInfo/q5d1b207/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/VersionProjects/Hex/AndroidHexMaraphon2048/AndroidHexMaraphon2048/.utmp/RelWithDebInfo/q5d1b207/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+C:/VersionProjects/Hex/AndroidHexMaraphon2048/AndroidHexMaraphon2048/.utmp/RelWithDebInfo/q5d1b207/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+C:/VersionProjects/Hex/AndroidHexMaraphon2048/AndroidHexMaraphon2048/.utmp/RelWithDebInfo/q5d1b207/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir

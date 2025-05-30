@@ -2,12 +2,18 @@ using Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using YG;
 
 namespace UI
 {
     public class AwardsView : MonoBehaviour
     {
+        private const string QuantyAwardCoins2048 = nameof(QuantyAwardCoins2048);
+        private const string QuantyAwardCoins4096 = nameof(QuantyAwardCoins4096);
+        private const string QuantyAwardCoins8192 = nameof(QuantyAwardCoins8192);
+        private const string QuantyAwardCoins16384 = nameof(QuantyAwardCoins16384);
+        private const string QuantyAwardCoins32768 = nameof(QuantyAwardCoins32768);
+        private const string QuantyAwardCoins65536 = nameof(QuantyAwardCoins65536);
+
         private PauseService _pauseService;
         private Button _openAwardPanelButton;
         private Button _closeAwardPanelButton;
@@ -76,12 +82,12 @@ namespace UI
             _pauseService.EnablePause();
             _awardsPanel.gameObject.SetActive(true);
 
-            SetTextAward(_award2048, YandexGame.savesData.award2048, _imageComplete2048);
-            SetTextAward(_award4096, YandexGame.savesData.award4096, _imageComplete4096);
-            SetTextAward(_award8192, YandexGame.savesData.award8192, _imageComplete8192);
-            SetTextAward(_award16384, YandexGame.savesData.award16384, _imageComplete16384);
-            SetTextAward(_award32768, YandexGame.savesData.award32768, _imageComplete32768);
-            SetTextAward(_award65536, YandexGame.savesData.award65536, _imageComplete65536);
+            SetTextAward(_award2048, PlayerPrefs.GetInt(QuantyAwardCoins2048), _imageComplete2048);
+            SetTextAward(_award4096, PlayerPrefs.GetInt(QuantyAwardCoins4096), _imageComplete4096);
+            SetTextAward(_award8192, PlayerPrefs.GetInt(QuantyAwardCoins8192), _imageComplete8192);
+            SetTextAward(_award16384, PlayerPrefs.GetInt(QuantyAwardCoins16384), _imageComplete16384);
+            SetTextAward(_award32768, PlayerPrefs.GetInt(QuantyAwardCoins32768), _imageComplete32768);
+            SetTextAward(_award65536, PlayerPrefs.GetInt(QuantyAwardCoins65536), _imageComplete65536);
         }
 
         private void Hide()

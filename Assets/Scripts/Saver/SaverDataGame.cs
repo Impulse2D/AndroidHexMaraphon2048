@@ -1,16 +1,15 @@
 using Awards;
 using Cell;
 using Hexes;
-using Liderboard;
 using SpawnerHexa;
 using System.Collections.Generic;
 using UnityEngine;
-using YG;
 
 namespace SaverData
 {
     public class SaverDataGame : MonoBehaviour
     {
+        private const string StartLearnStatus = nameof(StartLearnStatus);
         private const string QuantyAwardCoins2048 = nameof(QuantyAwardCoins2048);
         private const string QuantyAwardCoins4096 = nameof(QuantyAwardCoins4096);
         private const string QuantyAwardCoins8192 = nameof(QuantyAwardCoins8192);
@@ -30,21 +29,17 @@ namespace SaverData
         [SerializeField] private List<HexaCell> _cells;
 
         private HexaSpawner _hexaSpawner;
-        private LiderboardSaver _liderboardSaver;
         private AwardsCounter _awardsCounter;
 
-        private void OnDisable()
-        {
-            YandexGame.onHideWindowGame -= SaveBeforeCloseWindow;
-        }
-
-        public void Construct(HexaSpawner hexaSpawner, LiderboardSaver liderboardSaver, AwardsCounter awardsCounter)
+        public void Construct(HexaSpawner hexaSpawner, AwardsCounter awardsCounter)
         {
             _hexaSpawner = hexaSpawner;
-            _liderboardSaver = liderboardSaver;
             _awardsCounter = awardsCounter;
+        }
 
-            YandexGame.onHideWindowGame += SaveBeforeCloseWindow;
+        private void OnApplicationQuit()
+        {
+            SaveBeforeCloseWindow();
         }
 
         public void Init()
@@ -65,7 +60,7 @@ namespace SaverData
                 {
                     PlayerPrefs.DeleteKey(IdPlaneHexPrefs + i);
                 }
-            } 
+            }
 
             for (int i = 0; i < _hexaSpawner.PlaneHexes.Count; i++)
             {
@@ -156,13 +151,6 @@ namespace SaverData
                 ResetSavePrefsData(PositionPlaneHexPrefs + i);
             }
 
-            PlayerPrefs.DeleteKey(QuantyAwardCoins2048);
-            PlayerPrefs.DeleteKey(QuantyAwardCoins4096);
-            PlayerPrefs.DeleteKey(QuantyAwardCoins8192);
-            PlayerPrefs.DeleteKey(QuantyAwardCoins16384);
-            PlayerPrefs.DeleteKey(QuantyAwardCoins32768);
-            PlayerPrefs.DeleteKey(QuantyAwardCoins65536);
-
             ResetSavePrefsData(CurrentQuantyScore);
             ResetSavePrefsData(QuantityStars);
             _awardsCounter.ResetCounterAwardsCoins();
@@ -178,27 +166,12 @@ namespace SaverData
             PlayerPrefs.DeleteKey(QuantyAwardCoins65536);
 
             ResetSavePrefsData(Record);
-        }
-
-        //ÄëÿÊíîïêè
-        public void ResetDataYandexGame()
-        {
-            YandexGame.savesData.award2048 = 0;
-            YandexGame.savesData.award4096 = 0;
-            YandexGame.savesData.award8192 = 0;
-            YandexGame.savesData.award16384 = 0;
-            YandexGame.savesData.award32768 = 0;
-            YandexGame.savesData.award65536 = 0;
-
-            YandexGame.savesData.record = 0;
-            YandexGame.SaveProgress();
-
-            _liderboardSaver.ResetResultLiderboard();
+            ResetSavePrefsData(StartLearnStatus);
         }
 
         private void ResetSavePrefsData(string nameSave)
         {
-            if(PlayerPrefs.HasKey(nameSave) == true)
+            if (PlayerPrefs.HasKey(nameSave) == true)
             {
                 PlayerPrefs.DeleteKey(nameSave);
             }

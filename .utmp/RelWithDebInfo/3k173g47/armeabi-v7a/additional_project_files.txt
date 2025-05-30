@@ -1,0 +1,17 @@
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\GAToUnityCallbacks.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroEnd.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroHeaderBegin.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroSourceBegin.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAApplication.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAConfiguration.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGADebug.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAEvents.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAInput.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboard.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboardCallbacks.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGATypes.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAVersion.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGACallbacks.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAConfigurationCallbacks.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAKeyEventCallbacks.h
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAMotionEventCallbacks.h

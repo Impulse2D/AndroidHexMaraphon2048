@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using YG;
+
 
 namespace Services
 {
@@ -10,14 +10,8 @@ namespace Services
         private float _maxValueTime = 1f;
 
         public event Action FocusNotDetected;
-        public event Action FocusOnPauseNotDetected;
         public event Action PauseEnabled;
         public event Action PauseDisabled;
-
-        private void OnDisable()
-        {
-            YandexGame.onHideWindowGame -= TryENablePauseNotFocuse;
-        }
 
         public void Init()
         {
@@ -25,13 +19,11 @@ namespace Services
             {
                 DisablePause();
             }
-
-            YandexGame.onHideWindowGame += TryENablePauseNotFocuse;
         }
 
-        private void TryENablePauseNotFocuse()
+        private void OnApplicationFocus(bool focus)
         {
-            if(IsPause() == false)
+            if (focus == false && IsPause() == false)
             {
                 FocusNotDetected?.Invoke();
             }

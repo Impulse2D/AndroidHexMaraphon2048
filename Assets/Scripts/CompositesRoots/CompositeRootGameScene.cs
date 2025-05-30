@@ -1,10 +1,7 @@
 using Awards;
-using DetectorDeviceType;
 using Disablers;
 using Generations;
 using Hexes;
-using Liderboard;
-using Localozation;
 using PlayerInputReader;
 using SaverData;
 using Services;
@@ -42,8 +39,7 @@ namespace CompositesRoots
         [SerializeField] private ScorePanelView _scorePanelView;
         [SerializeField] private TextMeshProUGUI _textRecordQuantyScore;
         [SerializeField] private TextMeshProUGUI _textCurrentQuantyScore;
-        [SerializeField] private LiderboardSaver _liderboardSaver;
-        [SerializeField] private LevelReloader _levelReloader;
+        [SerializeField] private QuestionPanelView _questionPanelView;
         [SerializeField] private Button _resetLevelButton;
         [SerializeField] private GameOverPanelView _gameOverPanelView;
         [SerializeField] private GameObject _gameOverPanel;
@@ -56,9 +52,6 @@ namespace CompositesRoots
         [SerializeField] private PauseView _pauseView;
         [SerializeField] private GameObject _pausePanel;
         [SerializeField] private Button _closingPausePanelButton;
-        [SerializeField] private LanguageDefinition _languageDefinition;
-        [SerializeField] private LocalizationSelect _localizationSelect;
-        [SerializeField] private LocalizationSelector _localizationSelector;
         [SerializeField] private Button _buttonTranslateToRussian;
         [SerializeField] private Button _buttonTranslateToEnglish;
         [SerializeField] private CoinsSoundPlayer _coinsSoundPlayer;
@@ -105,12 +98,18 @@ namespace CompositesRoots
         [SerializeField] private LearnPanelView _learnPanelView;
         [SerializeField] private Button _closeButtonLearnPanel;
         [SerializeField] private GameObject _learnArm;
-        [SerializeField] private GameObject _learnMouse;
-        [SerializeField] private DeviceTypeDetector _deviceTypeDetector;
         [SerializeField] private LearnSettingsPanelView _learnSettingsPanelView;
         [SerializeField] private Button _openingButtonLearnSettingsPanel;
         [SerializeField] private Button _closingButtonLearnSettingsPanel;
         [SerializeField] private GameObject _learnSettingsPanel;
+        [SerializeField] private GameObject _adLoadingPanel;
+        [SerializeField] private GameObject _winAfterAdPanel;
+        [SerializeField] private YandexMobileAdsInterstitialDemoScript _interAdMobile;
+        [SerializeField] private AfterAdPanelView _afterAdPanelView;
+        [SerializeField] private Button _playingAfterAdPanelButton;
+        [SerializeField] private Button _rejectionButton;
+        [SerializeField] private GameObject _quationPanel;
+        [SerializeField] private Button _questionPanelOpeningButton;
         public void Init()
         {
             _inputReader.Construct(_pauseService);
@@ -129,13 +128,16 @@ namespace CompositesRoots
                 _awardsUiSpawner,
                 _starsGenerator,
                 _winView);
-            _saverDataGame.Construct(_hexaSpawner, _liderboardSaver, _awardsCounter);
-            _scorePanelView.Construct(_gamePointsIndicator,
-                _textRecordQuantyScore,
+            _saverDataGame.Construct(_hexaSpawner, _awardsCounter);
+            _scorePanelView.Construct(_textRecordQuantyScore,
                 _textCurrentQuantyScore,
-                _liderboardSaver,
                 _saverDataGame);
-            _levelReloader.Construct(_resetLevelButton, _saverDataGame);
+            _questionPanelView.Construct(_resetLevelButton, 
+                _rejectionButton, 
+                _saverDataGame,
+                _pauseService,
+                _quationPanel,
+                _questionPanelOpeningButton);
             _gameOverPanelView.Construct(_gameOverPanel,
                 _saverDataGame,
                 _playingAgainGameOverButton,
@@ -146,8 +148,6 @@ namespace CompositesRoots
                 _closingButtonSettingsPanel,
                 _pauseService);
             _pauseView.Construct(_pauseService, _pausePanel, _closingPausePanelButton);
-            _languageDefinition.Construct(_localizationSelect);
-            _localizationSelector.Construct(_localizationSelect, _buttonTranslateToRussian, _buttonTranslateToEnglish);
             _coinsSoundPlayer.Construct(_pauseService, _audioSourceCoinsSoundPlayer, _audioClipCoinsSoundPlayer);
             _hexaCollisionSoundPlayer.Construct(_pauseService, _audioSourceHexaCollisionSoundPlayer, _audioClipHexaCollisionSoundPlayer);
             _awardsView.Construct(_pauseService,
@@ -166,29 +166,34 @@ namespace CompositesRoots
                 _imageComplete16384,
                 _imageComplete32768,
                 _imageComplete65536);
-            _winPanelView.Construct(_pauseService,
-                _winPanel,
+            _winPanelView.Construct(_winPanel,
                 _closeButtonWinPanel,
                 _awardsUiSpawner,
                 _awardsCoinsUiDisabler,
-                _winView);
+                _winView,
+                _adLoadingPanel,
+                _winAfterAdPanel,
+                _interAdMobile,
+                _pauseService);
+
             _awardsCounter.Construct(_hexaSpawner);
             _awardsUiSpawner.Construct(_spawnObjectPositionAwardUi,
                 _parrentAwardUi,
                 _targetObjectAwardsUi);
             _awardsCoinsUiDisabler.Construct(_awardsUiSpawner, _awardsUiPool);
             _awardChestCoinSpawner.Construct(_targetObjectAwardChestCoin);
-            _awardChestCoinDisabler.Construct(_awardChestCoinSpawner, _awardChestCoinPool,_particleSystem);
-            _learnLoader.Construct(_pauseService, 
+            _awardChestCoinDisabler.Construct(_awardChestCoinSpawner, _awardChestCoinPool, _particleSystem);
+            _learnLoader.Construct(_pauseService,
                 _learnPanel,
                 _learnArm,
-                _learnMouse,
-                _deviceTypeDetector,
                 _hexagonsMover);
-            _learnPanelView.Construct(_closeButtonLearnPanel, _pauseService,_learnPanel);
+            _learnPanelView.Construct(_closeButtonLearnPanel, _pauseService, _learnPanel);
             _learnSettingsPanelView.Construct(_openingButtonLearnSettingsPanel,
                 _closingButtonLearnSettingsPanel,
                 _learnSettingsPanel);
+            _afterAdPanelView.Construct(_pauseService,
+                _winAfterAdPanel,
+                _playingAfterAdPanelButton);
         }
     }
 }

@@ -1,0 +1,2 @@
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\VersionProjects\Hex\AndroidHexMaraphon2048\AndroidHexMaraphon2048\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

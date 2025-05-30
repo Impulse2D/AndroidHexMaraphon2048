@@ -26,12 +26,16 @@ public class YandexMobileAdsInterstitialDemoScript : MonoBehaviour
         RequestInterstitial();
     }
 
-    private void RequestInterstitial()
+    public void RequestInterstitial()
     {
         //Sets COPPA restriction for user age under 13
         MobileAds.SetAgeRestrictedUser(true);
 
-        string adUnitId = "demo-interstitial-yandex";
+        // string adUnitId = "demo-interstitial-yandex";
+
+        //GooglePlay
+
+        string adUnitId = "R-M-15698777-1";
 
         if (this.interstitial != null)
         {
